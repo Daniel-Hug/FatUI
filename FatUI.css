@@ -1,12 +1,21 @@
 /*
+	Fat UI
 	Demo: https://github.com/Daniel-Hug/FatUI.git
 	Src:  https://github.com/Daniel-Hug/FatUI
 */
 
 
 
+/* A beautiful box model */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-/* Everything but checkboxes undefined radio inputs */
+
+
+/* Everything but checkboxes and radio inputs */
 [type=text],
 [type=email],
 [type=url],
@@ -35,7 +44,7 @@ textarea {
 
 
 
-/* Everything but checkboxes, radio inputs, file inputs, undefined textareas */
+/* Everything but checkboxes, radio inputs, file inputs, and textareas */
 [type=text],
 [type=email],
 [type=url],
@@ -55,12 +64,8 @@ textarea {
 button,
 select {
 	height: 2.2em;
-	/* 18 + (2 * 6) + (2 * 1) */
-
 	border: 1px solid #ccc;
 	padding: .375em;
-	/*border-radius: 4px;*/
-
 }
 
 
@@ -87,7 +92,7 @@ select {
 }
 
 [type=file]:active::-webkit-file-upload-button {
-	box-shadow: inset 0 1px 5px -2px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 .0625em .3125em -.125em rgba(0, 0, 0, 0.4);
 }
 
 
@@ -126,7 +131,7 @@ button:focus {
 [type=button]:active,
 [type=submit]:active,
 button:active {
-	box-shadow: inset 0 1px 5px -2px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 .0625em .3125em -.125em rgba(0, 0, 0, 0.4);
 }
 
 
@@ -170,10 +175,6 @@ button:active {
 	display: none;
 }
 
-/*[type=number] {
-	border-radius: 4px 0 0 4px;
-}*/
-
 
 
 /* textareas */
@@ -198,6 +199,7 @@ label .unit {
 	white-space: nowrap;
 	padding-left: .3em;
 	position: absolute;
+	margin-top: 1.2em; /* line-height */
 }
 
 label .unit  + input {
