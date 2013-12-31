@@ -168,6 +168,9 @@ label .unit.negative + input {
   display: block;
   margin-top: 1.2em;
 }
+.field-row-top {
+  display: block;
+}
 .stacked-label {
   display: block;
   margin-bottom: 0.3125em;
