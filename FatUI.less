@@ -169,34 +169,8 @@ textarea {
 
 
 
-/* 
-	Labels
-	Example markup: <label><span class=unit>$</span><input type=number></label>
-*/
 
-label {
-	display: inline-block;
-
-	.unit {
-		display: inline-block;
-		height: 2.2em;
-		line-height: 2.2em;
-		white-space: nowrap;
-		padding-left: .3em;
-		position: absolute;
-		margin-top: 1.2em; /* line-height */
-	
-		& + input {
-			padding-left: .8em;
-		}
-	
-		&.negative + input {
-			padding-left: 1.1em;
-		}
-	}
-}
-
-
+/* Helper classes */
 
 .field-row {
 	display: block;
@@ -207,12 +181,47 @@ label {
 	display: block;
 }
 
-.stacked-label {
-	display: block;
-	margin-bottom: 0.3125em;
+.wrap {
+	position: relative;
 }
 
+.full-width {
+	width: 100%;
+}
 
+/* 
+	Labels
+
+	Example markup:
+	<label class="field-row">
+		Price
+		<div class="wrap full-width">
+			<span class="unit">$</span>
+			<input type="number" class="full-width" name="dollars" min="0" step=".01" maxlength="7" placeholder="0.00" required>
+		</div>
+	</label>
+*/
+label {
+	display: inline-block;
+
+	.unit {
+		display: inline-block;
+		height: 2.2em;
+		line-height: 2.2em;
+		white-space: nowrap;
+		padding-left: .3em;
+		position: absolute;
+		top: 0;
+	
+		& + input {
+			padding-left: .8em;
+		}
+	
+		&.negative + input {
+			padding-left: 1.1em;
+		}
+	}
+}
 
 
 
