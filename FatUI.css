@@ -93,6 +93,12 @@ button {
   -ms-user-select: none;
   user-select: none;
 }
+[type=reset]:focus,
+[type=button]:focus,
+[type=submit]:focus,
+button:focus {
+  outline: 0;
+}
 [type=reset]:hover,
 [type=button]:hover,
 [type=submit]:hover,
